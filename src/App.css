@@ -10,7 +10,7 @@ video {
 .box{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin-top: 250px;
   background-color: rgba(240, 255, 255, 0.595);
@@ -33,8 +33,8 @@ button{
 }
 .tip{
   background-color: rgba(255, 255, 255, 0.657);
-  padding: 15px;
-  width: 500px;
+  padding: 40px;
+  width: 450px;
   border-radius: 5px;
 }
 h1{
