@@ -1,17 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import video from './boy.mp4';
 import './App.css';
 
 function App() {
   const[myAdvice, setMyAdvice] = useState(null);
-  //useEffect(()=>{
-  // getAdvice();
-  //},[])
 
     const getAdvice = async() =>{
       const response = await fetch (`http://www.boredapi.com/api/activity/ `)
       const data = await response.json();
-      console.log(data.activity);
       setMyAdvice(data.activity);
     }
   
