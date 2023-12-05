@@ -18,7 +18,7 @@ function App() {
           </video>
         
             <div className='box'>
-            <h1>You are bored and have no idea what to do?</h1>
+            <h1>You are bored and out of ideas?</h1>
             <h2 className='tip'>{myAdvice}</h2>
             <button onClick={ getAdvice }>GET AN IDEA</button>
             </div>
