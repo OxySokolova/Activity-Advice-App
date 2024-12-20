@@ -5,11 +5,20 @@ import './App.css';
 function App() {
   const[myAdvice, setMyAdvice] = useState(null);
 
-    const getAdvice = async() =>{
-      const response = await fetch (`https://www.boredapi.com/api/activity/ `)
+  const getAdvice = async () => {
+    try {
+      const response = await fetch('/random');
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
       const data = await response.json();
       setMyAdvice(data.activity);
+    } catch (error) {
+      console.error('Failed to fetch advice:', error);
+      setMyAdvice('Could not fetch advice. Please try again later.');
     }
+  };
+  
   
   return (
     <div className='container'>
@@ -18,7 +27,7 @@ function App() {
           </video>
         
             <div className='box'>
-            <h1>You are bored and out of ideas?</h1>
+            <h1>Are you bored and looking for ideas?</h1>
             <h2 className='tip'>{myAdvice}</h2>
             <button onClick={ getAdvice }>GET AN IDEA</button>
             </div>

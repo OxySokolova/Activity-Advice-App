@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/random"
+  to = "https://bored-api.appbrewery.com/random"
+  status = 200
+  force = true
